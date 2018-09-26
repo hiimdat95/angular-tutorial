@@ -9,11 +9,15 @@ import 'rxjs/add/operator/catch';
   providedIn: 'root'
 })
 export class PostsService {
-  private apiUrl='https://jsonplaceholder.typicode.com/users';
+  private apiUrl='https://carrier-app-api.azurewebsites.net/api/data/sample_data?code=UwwoqV/ZrIXiUVZbvpRhCgxiujKqrAfSMxWkGGndjmJW8UOWD5xEvg==';
   constructor(private _http: Http) { }
   getListPost(): Observable<any>{
     return this._http.get(this.apiUrl)
             .map((response: Response) => <any>response.json());
     }
+
+    
+
+
 
 }

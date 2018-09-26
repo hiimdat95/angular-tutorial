@@ -1,0 +1,31 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+
+    flex-basis: 300px;
+  }
+
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+  }
+
+   .mat-column-name{
+  border-right: 1px solid grey;
+  align-self: stretch;
+  text-align: center
+
+
+  }
+  .mat-column-email{
+  border-right: 1px solid grey;
+  align-self: stretch;
+  text-align: center;
+
+  }
+  .mat-column-active{
+  border-right: 1px solid grey;
+  align-self: stretch;
+  text-align: center;
+
+  } 

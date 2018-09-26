@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import axios from "axios";
+import { MatTableDataSource, MatSort, MatPaginator } from '@angular/material';
+
 import { PostsService } from "../services/posts/posts.service";
 
 @Component({
@@ -12,8 +14,10 @@ export class PostsComponent implements OnInit {
 
   show: Boolean;
 
-  constructor(private postService: PostsService) {}
-
+  constructor(private postService: PostsService) { }
+  displayedColumns: string[] = ['name','email','active'];
+  // dataSource = new MatTableDataSource(this.postService.getListPost().subscribe((respone: any));
+  
   ngOnInit() {
     this.show = true;
     // axios
@@ -25,8 +29,8 @@ export class PostsComponent implements OnInit {
     //   })
     //   .catch(err => console.log(err));
 
-    this.postService.getListPost().subscribe((respone: any)=>{
-      this.data=respone;
+    this.postService.getListPost().subscribe((respone: any) => {
+      this.data = respone;
       this.show = false;
     })
   }
